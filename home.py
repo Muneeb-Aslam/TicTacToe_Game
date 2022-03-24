@@ -1,3 +1,6 @@
+from argparse import Action
+from cProfile import label
+from cgitb import text
 from tkinter import *
 from turtle import *
 def centeredscreen(root):
@@ -16,7 +19,12 @@ if __name__=="__main__":
     root.title("TicTaeToe")
     centeredscreen(root)
     root.resizable(False,False)
-    
+    root.configure(bg="darkgrey")
+
+    choice = Label(root,text="Choose the Numbers of Players")
+    players = Button(root,text="Two Players",command=Action)
+    player = Button(root,text="One Players",command=Action)
+
 
 
     root.mainloop()
